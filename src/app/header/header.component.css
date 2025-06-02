@@ -1,0 +1,22 @@
+#mainHeader {
+  width: 100vw;
+  min-height: 7vh;
+  display: grid;
+  grid-template-columns: 2fr 5fr 3fr;
+  grid-template-areas: "space title menu";
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(28, 33, 40, 255);
+}
+#menuImage {
+  grid-area: menu;
+  width: 36px;
+  height: 36px;
+}
+#menuImage img {
+  width: inherit;
+}
+#mainTitle {
+  grid-area: title;
+  color: rgba(72, 199, 142, 255);
+}
