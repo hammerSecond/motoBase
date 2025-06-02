@@ -1,6 +1,6 @@
 export interface Driver{
-    id: String;
-    full_name: String;
+    id: string;
+    full_name: string;
     number: number;
     points: number;
 }
