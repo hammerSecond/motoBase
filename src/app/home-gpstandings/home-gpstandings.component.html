@@ -1,3 +1,7 @@
 <section class="homeSection">
-    
+    @for(classification of classificationData; track classification.id){
+        @if($index < 10){
+            <div class="riderCard"><a class="riderName">{{classification.rider.full_name}}</a><span class="riderPoints">{{classification.points}}</span></div>
+        }
+    }
 </section>

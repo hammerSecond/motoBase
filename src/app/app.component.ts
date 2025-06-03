@@ -1,8 +1,8 @@
-import { Component, inject, Signal, computed } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { DriversService } from './drivers.service';
-import { Driver } from './driver.model';
+import { GpClassificationService } from './services/gp-classification.service';
+
 
 @Component({
   selector: 'app-root',
@@ -12,10 +12,9 @@ import { Driver } from './driver.model';
 })
 export class AppComponent {
   title = 'motoDataBase';
-
   
-  constructor(private driversService:DriversService){}
+  constructor(private gpClassificationService:GpClassificationService){}
   ngOnInit(){
-    this.driversService.driverList().sub
+    this.gpClassificationService.classificationList().subscribe()
   }
 }
