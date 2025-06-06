@@ -21,7 +21,9 @@ export class GpTeamStandingsComponent {
       let maxPoints = points[0];
       let cont = 0;
       pointContainers.forEach(pointContainer => {
-        pointContainer.style.width = `${points[cont] / maxPoints * 100}%`;
+        let width = points[cont] / maxPoints * 100;
+        width < 13 ? width = 13 : "";
+        pointContainer.style.width = `${width}%`;
         switch (teams[cont++]){
           case "Ducati Lenovo Team":
             pointContainer.style.backgroundColor = `#ab0200`;
@@ -60,7 +62,7 @@ export class GpTeamStandingsComponent {
             pointContainer.style.color = `whitesmoke`;
             break;
           case "Honda HRC Castrol":
-            pointContainer.style.backgroundColor = `##ef0401`;
+            pointContainer.style.backgroundColor = `#ef0401`;
             pointContainer.style.color = `whitesmoke`;
             break;
           case "Prima Pramac Yamaha MotoGP":

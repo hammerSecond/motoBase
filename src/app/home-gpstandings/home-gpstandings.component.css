@@ -9,13 +9,14 @@
 }
 .homeSection {
   width: 90vw;
-  height: 40vh;
+  min-height: 40vh;
   border: solid 2px rgba(72, 199, 142, 255);
   border-radius: 10px;
   margin-top: 8px;
   padding-block: 8px;
   display: flex;
   flex-direction: column;
+  row-gap: 6px;
 }
 .riderCard{
   display: grid;
@@ -32,7 +33,7 @@
 }
 .riderPoints{
   text-align: right;
-  padding-right: 8px;
+  padding-right: 4px;
   justify-self: left;
 }
 .dash {
