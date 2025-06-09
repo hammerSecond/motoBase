@@ -1,1 +1,10 @@
-<p>moto2-team-standings works!</p>
+<h2 class="subTitle">Moto2 Team Standings</h2>
+<section class="homeSection">
+  @for(team of teamList; track team.name){
+  <div class="teamCard">
+    <a class="teamName">{{ team.name }}</a
+    ><span class="dash">-</span><p class="teamPoints">{{ team.points }}</p
+    >
+  </div>
+  }
+</section>

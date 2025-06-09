@@ -1,1 +1,10 @@
-<p>moto3-standings works!</p>
+<h2 class="subTitle">Moto3 Rider Standings</h2>
+<section class="homeSection">
+  @for(classification of classificationData; track classification.id){
+  <div class="riderCard">
+    <a class="riderName">{{ classification.rider.full_name }}</a
+    ><span class="dash">-</span><span class="riderPoints">{{ classification.points }}</span
+    ><span class="riderTeam" hidden>{{ classification.team.name }}</span>
+  </div>
+  }
+</section>

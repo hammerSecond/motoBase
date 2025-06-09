@@ -23,58 +23,66 @@ export class Moto2StandingsComponent {
           width < 13 ? width = 13 : "";
           pointContainer.style.width = `${width}%`;
           switch (teams[cont++]){
-            case "Ducati Lenovo Team":
-              pointContainer.style.backgroundColor = `#ab0200`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "BK8 Gresini Racing MotoGP":
-              pointContainer.style.backgroundColor = `#96afe7`;
-              pointContainer.style.color = `black`;
-              break;
-            case "Pertamina Enduro VR46 Racing Team":
-              pointContainer.style.backgroundColor = `#dbff02`;
-              pointContainer.style.color = `black`;
-              break;
-            case "CASTROL Honda LCR":
-              pointContainer.style.backgroundColor = `whitesmoke`;
-              pointContainer.style.color = `black`;
-              break;
-            case "Aprilia Racing":
-              pointContainer.style.backgroundColor = `#67239c`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "Monster Energy Yamaha MotoGP Team":
-              pointContainer.style.backgroundColor = `#0e297a`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "Red Bull KTM Factory Racing":
-              pointContainer.style.backgroundColor = `#fa802b`;
-              pointContainer.style.color = `black`;
-              break;
-            case "Red Bull KTM Tech3":
-              pointContainer.style.backgroundColor = `#e8711f`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "Trackhouse MotoGP Team":
-              pointContainer.style.backgroundColor = `#0066c6`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "Honda HRC Castrol":
-              pointContainer.style.backgroundColor = `#ef0401`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "Prima Pramac Yamaha MotoGP":
-              pointContainer.style.backgroundColor = `#1c5bbd`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "Honda HRC Test Team":
-              pointContainer.style.backgroundColor = `#7b0001`;
-              pointContainer.style.color = `whitesmoke`;
-              break;
-            case "IDEMITSU Honda LCR":
-              pointContainer.style.backgroundColor = `whitesmoke`;
-              pointContainer.style.color = `black`;
-              break;
+          case "LIQUI MOLY Dynavolt Intact GP":
+            pointContainer.style.backgroundColor = `#27282a`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "Fantic Racing Lino Sonego":
+            pointContainer.style.backgroundColor = `#a80534`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "Italtrans Racing Team":
+            pointContainer.style.backgroundColor = `#0c70ab`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "ELF Marc VDS Racing Team":
+            pointContainer.style.backgroundColor = `#642c39`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "Red Bull KTM Ajo":
+            pointContainer.style.backgroundColor = `#ff5f08`;
+            pointContainer.style.color = `black`;
+            break;
+          case "Onlyfans American Racing Team":
+            pointContainer.style.backgroundColor = `#0f37b1`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "Beta Tools SpeedRS Team":
+            pointContainer.style.backgroundColor = `#f74b47`;
+            pointContainer.style.color = `black`;
+            break;
+          case "ITALJET Gresini Moto2":
+            pointContainer.style.backgroundColor = `#98abed`;
+            pointContainer.style.color = `black`;
+            break;
+          case "CFMOTO Inde Aspar Team":
+            pointContainer.style.backgroundColor = `#0c95b9`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "BLU CRU Pramac Yamaha Moto2":
+            pointContainer.style.backgroundColor = `#1c5bbd`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "QJMOTOR - FRINSA - MSI":
+            pointContainer.style.backgroundColor = `#dc0a27`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          case "KLINT Forward Factory Team":
+            pointContainer.style.backgroundColor = `#70cfbb`;
+            pointContainer.style.color = `black`;
+            break;
+          case "RW-Idrofoglia Racing GP":
+            pointContainer.style.backgroundColor = `#4cade4`;
+            pointContainer.style.color = `black`;
+            break;
+          case "Idemitsu Honda Team Asia":
+            pointContainer.style.backgroundColor = `#f6fbff`;
+            pointContainer.style.color = `black`;
+            break;
+          case "RW - Idrofoglia Racing GP":
+            pointContainer.style.backgroundColor = `#4cade4`;
+            pointContainer.style.color = `black`;
+            break;
           }
         });
       })
