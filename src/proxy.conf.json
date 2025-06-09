@@ -1,7 +1,7 @@
 {
   "/api": {
     "target": "https://api.motogp.pulselive.com/motogp/v1",
-    "secure": true,
+    "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",
     "pathRewrite": {
