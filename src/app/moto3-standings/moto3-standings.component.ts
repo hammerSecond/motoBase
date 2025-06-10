@@ -1,5 +1,6 @@
-import { afterRender, Component, ElementRef, inject } from '@angular/core';
+import { afterRender, Component, ElementRef, Inject, inject, PLATFORM_ID } from '@angular/core';
 import { Moto3ClassificationService } from '../services/moto3-classification.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'moto3-standings',
@@ -9,7 +10,7 @@ import { Moto3ClassificationService } from '../services/moto3-classification.ser
 })
 export class Moto3StandingsComponent {
   classificationData:any;
-    constructor(private moto3ClassificationService:Moto3ClassificationService){
+    constructor(private moto3ClassificationService:Moto3ClassificationService, @Inject(PLATFORM_ID) private platformId: any){
       const elementRef = inject(ElementRef);
       afterRender(() => {
         let pointContainers: NodeListOf<HTMLElement> = elementRef.nativeElement.querySelectorAll('.riderPoints');
@@ -83,13 +84,19 @@ export class Moto3StandingsComponent {
             pointContainer.style.backgroundColor = `#4cade4`;
             pointContainer.style.color = `black`;
             break;
+          default:
+            pointContainer.style.backgroundColor = `rgba(72, 199, 142, 255)`;
+            pointContainer.style.color = `black`;
+            break;
         }
         });
       })
     }
     ngOnInit(){
-      this.moto3ClassificationService.classificationList().subscribe((data:any)=>{
-        this.classificationData=data.classification;
-      })
+      if (isPlatformBrowser(this.platformId)){
+        this.moto3ClassificationService.classificationList().subscribe((data:any)=>{
+          this.classificationData=data.classification;
+        })
+      }
     }
 }

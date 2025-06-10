@@ -1,39 +1,39 @@
-#menuImage{
-    height: fit-content;
+#menuImage {
+  height: fit-content;
 }
-#menuImage img{
-    height: 6vh;
+#menuImage img {
+  height: 6vh;
 }
 aside {
-    width: 25vw;
-    visibility: hidden;
-    height: 100vh;
-    &.visible{
-        visibility: visible;
-    }
+  width: 25vw;
+  visibility: hidden;
+  height: 100vh;
+  &.visible {
+    visibility: visible;
+  }
 }
 
 ul {
-    height: 20vh;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  height: 20vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-li{
-    padding-block: 3px;
-    width: 11vh;
-    border: solid 2px rgba(72, 199, 142, 255);
-    border-radius: 15px;
+li {
+  padding-block: 3px;
+  width: 11vh;
+  border: solid 2px rgba(72, 199, 142, 255);
+  border-radius: 15px;
 }
-a{
-    text-decoration: none;
-    color: rgba(72, 199, 142, 255);
-    font-family: Arial, Helvetica, sans-serif;
+a {
+  text-decoration: none;
+  color: rgba(72, 199, 142, 255);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
-    text-align: center;
-    background-color: rgba(28, 33, 40, 255);
+  text-align: center;
+  background-color: rgba(28, 33, 40, 255);
 }

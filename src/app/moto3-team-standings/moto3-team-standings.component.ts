@@ -1,6 +1,7 @@
-import { afterRender, Component, ElementRef, inject } from '@angular/core';
+import { afterRender, Component, ElementRef, Inject, inject, PLATFORM_ID } from '@angular/core';
 import { Moto3ClassificationService } from '../services/moto3-classification.service';
 import { team } from '../models/team.model';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'moto3-team-standings',
@@ -11,7 +12,7 @@ import { team } from '../models/team.model';
 export class Moto3TeamStandingsComponent {
   teamClassificationData:any;
   teamList:any;
-  constructor(private moto3ClassificationService:Moto3ClassificationService){
+  constructor(private moto3ClassificationService:Moto3ClassificationService, @Inject(PLATFORM_ID) private platformId: any){
     const elementRef = inject(ElementRef);
     afterRender(() => {
       let pointContainers: NodeListOf<HTMLElement> = elementRef.nativeElement.querySelectorAll('.teamPoints');
@@ -85,11 +86,16 @@ export class Moto3TeamStandingsComponent {
             pointContainer.style.backgroundColor = `#4cade4`;
             pointContainer.style.color = `black`;
             break;
+          default:
+            pointContainer.style.backgroundColor = `rgba(72, 199, 142, 255)`;
+            pointContainer.style.color = `black`;
+            break;
         }
       });
     })
   }
   ngOnInit(){
+    if (isPlatformBrowser(this.platformId)) {
     this.moto3ClassificationService.classificationList().subscribe((data:any)=>{
       this.teamClassificationData = data.classification;
       let teamNames: string[] = [];
@@ -107,5 +113,6 @@ export class Moto3TeamStandingsComponent {
       }
       this.teamList = teams.sort(({points:a}, {points:b}) => b-a);
     })
+  }
   }
 }

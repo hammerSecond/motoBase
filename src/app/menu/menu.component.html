@@ -1,10 +1,10 @@
-<figure id="menuImage" (click) ="visible = !visible">
-    <img src="../../assets/img/menu.png" alt="imagen del menu" />
+<figure id="menuImage" (click)="visible = !visible">
+  <img src="../../assets/img/menu.png" alt="imagen del menu" />
 </figure>
 <aside id="menuContainer" [class.visible]="visible">
-    <ul>
-        <li><a href="/">Moto GP</a></li>
-        <li><a href="/moto2">Moto 3</a></li>
-        <li><a href="/moto3">Moto 2</a></li>
-    </ul>
+  <ul>
+    <li><a [routerLink]="['']">Moto GP</a></li>
+    <li><a [routerLink]="['moto2']">Moto 2</a></li>
+    <li><a [routerLink]="['moto3']">Moto 3</a></li>
+  </ul>
 </aside>

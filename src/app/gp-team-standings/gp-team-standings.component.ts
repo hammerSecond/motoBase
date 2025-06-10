@@ -1,6 +1,7 @@
-import { afterRender, Component, ElementRef, inject } from '@angular/core';
+import { afterRender, Component, ElementRef, Inject, inject, PLATFORM_ID } from '@angular/core';
 import { GpClassificationService } from '../services/gp-classification.service';
 import { team } from '../models/team.model';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'gp-team-standings',
@@ -11,7 +12,7 @@ import { team } from '../models/team.model';
 export class GpTeamStandingsComponent {
   teamClassificationData:any;
   teamList:any;
-  constructor(private gpClassificationService:GpClassificationService){
+  constructor(private gpClassificationService:GpClassificationService, @Inject(PLATFORM_ID) private platformId: any){
     const elementRef = inject(ElementRef);
     afterRender(() => {
       let pointContainers: NodeListOf<HTMLElement> = elementRef.nativeElement.querySelectorAll('.teamPoints');
@@ -77,11 +78,20 @@ export class GpTeamStandingsComponent {
             pointContainer.style.backgroundColor = `whitesmoke`;
             pointContainer.style.color = `black`;
             break;
+          case "Yamaha Factory Racing":
+            pointContainer.style.backgroundColor = `#0e297a`;
+            pointContainer.style.color = `whitesmoke`;
+            break;
+          default:
+            pointContainer.style.backgroundColor = `rgba(72, 199, 142, 255)`;
+            pointContainer.style.color = `black`;
+            break;
         }
       });
     })
   }
   ngOnInit(){
+    if (isPlatformBrowser(this.platformId)) {
     this.gpClassificationService.classificationList().subscribe((data:any)=>{
       this.teamClassificationData = data.classification;
       let teamNames: string[] = [];
@@ -99,5 +109,6 @@ export class GpTeamStandingsComponent {
       }
       this.teamList = teams.sort(({points:a}, {points:b}) => b-a);
     })
+  }
   }
 }
