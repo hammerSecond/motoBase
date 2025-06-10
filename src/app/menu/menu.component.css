@@ -1,8 +1,13 @@
+#menuImage{
+    height: fit-content;
+}
+#menuImage img{
+    height: 6vh;
+}
 aside {
     width: 25vw;
     visibility: hidden;
     height: 100vh;
-
     &.visible{
         visibility: visible;
     }
@@ -18,7 +23,7 @@ ul {
 }
 li{
     padding-block: 3px;
-    width: 9vh;
+    width: 11vh;
     border: solid 2px rgba(72, 199, 142, 255);
     border-radius: 15px;
 }

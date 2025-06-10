@@ -3,4 +3,6 @@
   padding: 0px;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
