@@ -1,7 +1,13 @@
 #mainContent {
+  padding-top: 7vh;
   width: 100vw;
   min-height: 70vh;
   background-color: rgba(34, 39, 46, 255);
   display: flex;
   justify-content: center;
+}
+app-menu{
+  position: fixed;
+  right: 0;
+  top: 0.5vh;
 }

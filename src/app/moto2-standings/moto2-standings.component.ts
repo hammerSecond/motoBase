@@ -24,7 +24,7 @@ export class Moto2StandingsComponent {
           pointContainer.style.width = `${width}%`;
           switch (teams[cont++]){
           case "LIQUI MOLY Dynavolt Intact GP":
-            pointContainer.style.backgroundColor = `#27282a`;
+            pointContainer.style.backgroundColor = `#5a5051`;
             pointContainer.style.color = `whitesmoke`;
             break;
           case "Fantic Racing Lino Sonego":
