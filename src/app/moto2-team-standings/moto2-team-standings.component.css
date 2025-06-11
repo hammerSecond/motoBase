@@ -30,7 +30,7 @@
   font-size: 0.8rem;
 }
 .teamName {
-  justify-self: left;
+  justify-self: right;
   margin-left: 8px;
   color: whitesmoke;
 }

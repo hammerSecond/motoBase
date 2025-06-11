@@ -14,15 +14,14 @@ aside {
   }
 }
 
-ul {
+#linkSection{
   height: 20vh;
-  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-li {
+p{
   padding-block: 3px;
   width: 23vw;
   border: solid 2px rgba(72, 199, 142, 255);
@@ -41,13 +40,13 @@ a {
 }
 
 @media (min-width: 768px){
-  ul{
+  #linkSection{
     height: 25vh;
   }
   a{
     font-size: 1.3rem;
   }
-  li{
+  p{
     width: 18vw;
     border-radius: 20px;
   }

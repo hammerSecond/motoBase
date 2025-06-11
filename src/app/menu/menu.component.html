@@ -2,9 +2,9 @@
   <img src="../../assets/img/menu.png" alt="imagen del menu" />
 </figure>
 <aside id="menuContainer" [class.visible]="visible">
-  <ul>
-    <li><a [routerLink]="['']">Moto GP</a></li>
-    <li><a [routerLink]="['moto2']">Moto 2</a></li>
-    <li><a [routerLink]="['moto3']">Moto 3</a></li>
-  </ul>
+  <section id="linkSection">
+    <a [routerLink]="['']"><p>MotoGP</p></a>
+    <a [routerLink]="['moto2']"><p>Moto 2</p></a>
+    <a [routerLink]="['moto3']"><p>Moto 3</p></a>
+  </section>
 </aside>
