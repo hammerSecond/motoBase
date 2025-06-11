@@ -20,4 +20,11 @@
 #mainTitle {
   grid-area: title;
   color: rgba(72, 199, 142, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 768px){
+  #mainTitle{
+    font-size: 2.5rem;
+  }
 }

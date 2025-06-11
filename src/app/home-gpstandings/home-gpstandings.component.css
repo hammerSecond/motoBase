@@ -39,3 +39,18 @@
 .dash {
   color: whitesmoke;
 }
+
+@media (min-width: 430px){
+  .riderCard{
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .subTitle{
+    font-size: 2rem;
+  }
+  .homeSection{
+    width: 65vw;
+  }
+}

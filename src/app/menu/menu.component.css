@@ -1,8 +1,9 @@
 #menuImage {
-  height: fit-content;
+  padding-top: 1vh;
+  height: 6vh;
 }
 #menuImage img {
-  height: 6vh;
+  height: 4vh;
 }
 aside {
   width: 25vw;
@@ -23,7 +24,7 @@ ul {
 }
 li {
   padding-block: 3px;
-  width: 11vh;
+  width: 23vw;
   border: solid 2px rgba(72, 199, 142, 255);
   border-radius: 15px;
 }
@@ -31,9 +32,32 @@ a {
   text-decoration: none;
   color: rgba(72, 199, 142, 255);
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 * {
   text-align: center;
   background-color: rgba(28, 33, 40, 255);
+}
+
+@media (min-width: 768px){
+  ul{
+    height: 25vh;
+  }
+  a{
+    font-size: 1.3rem;
+  }
+  li{
+    width: 18vw;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 1024px){
+  #menuImage{
+    visibility: hidden;
+  }
+  aside{
+    visibility: visible;
+  }
 }
